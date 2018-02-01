@@ -35,6 +35,7 @@ public class Practica_entregar_ute_6 {
 	
 	//Metodo que nos va a imprimir el menor valor del array aleatorio
 	public static void imprimirMenor() {
+		menor = 10;
 
 		for (int i = 0; i < arrayaleatorio.length; i++) {
 
@@ -66,21 +67,29 @@ public class Practica_entregar_ute_6 {
 
 		for (int elementos : arrayaleatorio) {
 
-			System.out.println("Los elementos del array son " + elementos);
+			System.out.println("Los elementos del array son " + elementos+ " ");
 		}
 	}
 	
 	//este metodo imprime los valores que se repiten dentro del array
 	public static void imprimeRepe() {
+		numero = (int)(Math.random()*10)+1;
+		repe = 0;
 
-		for (int i = 0; i < arrayaleatorio.length; i++) {
+		for (int i = 0; i < 20; i++) {
 
-			if (arrayaleatorio[i] == arrayaleatorio.length) {
-				repe++;
-			}
-
+			if (numero == arrayaleatorio[i]) { 
+				repe = repe+1;			
+					
 		}
+		}
+		if (repe>0) {
+		
 		System.out.println("El numero" + arrayaleatorio[i] + " se repite " + repe + " veces");
+		}
+		else {
+			System.out.println("No hay valores que se repitan");
+		}
 
 	}
 
