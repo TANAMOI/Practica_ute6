@@ -8,7 +8,7 @@ public class Practica_entregar_ute_6 {
 
 	
 	//definimos las variables que vamos a usar dentro de la clase
-	static int i;
+	static int i,j;
 	static int menor;
 	static int mayor;
 	static int numero;
@@ -73,25 +73,30 @@ public class Practica_entregar_ute_6 {
 	
 	//este metodo imprime los valores que se repiten dentro del array
 	public static void imprimeRepe() {
-		numero = (int)(Math.random()*10)+1;
-		repe = 0;
-
-		for (int i = 0; i < 20; i++) {
-
-			if (numero == arrayaleatorio[i]) { 
-				repe = repe+1;			
-					
-		}
-		}
-		if (repe>0) {
 		
-		System.out.println("El numero" + arrayaleatorio[i] + " se repite " + repe + " veces");
-		}
-		else {
-			System.out.println("No hay valores que se repitan");
-		}
+		
+		Arrays.sort(arrayaleatorio);
+		
 
-	}
+		for (int i = 1; i <arrayaleatorio.length; i++) {
+			
+			
+				
+			if(arrayaleatorio[i]==arrayaleatorio[i-1]) {
+				
+			repe++;
+			
+			}
+			
+					
+		
+		
+		System.out.println("El numero " + arrayaleatorio[i-1] + " se repite " + repe+ " veces");
+		}
+		}
+		
+
+	
 
 	public static void main(String[] args) {
 
