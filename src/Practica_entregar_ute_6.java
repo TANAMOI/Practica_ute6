@@ -72,17 +72,17 @@ public class Practica_entregar_ute_6 {
 	}
 	
 	//este metodo imprime los valores que se repiten dentro del array
-	public static void imprimeRepe() {
-		
+	public static int imprimeRepe(int numero) {
+		int repe = 0;
 		
 		Arrays.sort(arrayaleatorio);
 		
 
-		for (int i = 1; i <arrayaleatorio.length; i++) {
+		for (int i = 0; i <arrayaleatorio.length; i++) {
 			
 			
 				
-			if(arrayaleatorio[i]==arrayaleatorio[i-1]) {
+			if(arrayaleatorio[i]==numero) {
 				
 			repe++;
 			
@@ -91,8 +91,9 @@ public class Practica_entregar_ute_6 {
 					
 		
 		
-		System.out.println("El numero " + arrayaleatorio[i-1] + " se repite " + repe+ " veces");
+		
 		}
+		return repe;
 		}
 		
 
@@ -118,7 +119,7 @@ public class Practica_entregar_ute_6 {
 			System.out.println("2. Imprimir el menor valor del array");
 			System.out.println("3. Calcular la media de todos los valores del array");
 			System.out.println("4. Imprimir todos los valores del array");
-			System.out.println("5. Calcular nº de veces que se encuentra un valor repetido");
+			System.out.println("5. Calcular nÂº de veces que se encuentra un valor repetido");
 			System.out.println();
 
 			opcion = Integer.parseInt(JOptionPane.showInputDialog("Eliga una opcion por favor"));
@@ -142,7 +143,8 @@ public class Practica_entregar_ute_6 {
 				break;
 
 			case 5:
-				imprimeRepe();
+				numero=sc.nextInt();
+				System.out.println("El numero se repite:"+ imprimeRepe(numero));	
 				break;
 
 			case 0:
