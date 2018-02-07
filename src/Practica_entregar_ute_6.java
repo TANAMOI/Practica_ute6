@@ -73,7 +73,7 @@ public class Practica_entregar_ute_6 {
 	
 	//este metodo imprime los valores que se repiten dentro del array
 	public static int imprimeRepe(int numero) {
-		int repe = 0;
+		
 		
 		Arrays.sort(arrayaleatorio);
 		
